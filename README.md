@@ -1,2 +1,1 @@
-# PPR
-Python Pattern Recognizer
+# Python Pattern Recognizer
