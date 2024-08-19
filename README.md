@@ -11,4 +11,4 @@ With the 1st and 2nd numbers, we check if the 2nd and 3rd match them. If not, we
 n is our list. This is where our pattern is.
 
 ## Why
-I'm making a rock paper scissors game where the AI looks back at your patterns and predicts your next choice based on them.
+I'm making a rock paper scissors game where the AI looks back at your patterns and predicts your next choice based on them. One day i'll make something for actual patterns and not just repeating numbers.
