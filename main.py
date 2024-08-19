@@ -1,17 +1,19 @@
-import random
-def main():
-    options = ['rock','paper','scissors']
-    prev_choices = []
-    print("Welcome to Rock Paper Scissors")
-    while True:
-        plr_input = str(input("Enter rock, paper, or scissors: "))
-        while plr_input not in options:
-            print("Invalid.")
-            plr_input = str(input("Enter rock, paper, or scissors: "))
-        prev_choices.append(options.index(plr_input))
-def bot(prev_choices):
-    newest = prev_choices[-len(prev_choices)]
-    spots = [index for index, value in enumerate(prev_choices) if value == newest]
-    if len(spots) == 1:
-        pass # prevent error while fix
-    
+def rp(list, i, z, p=[]):
+    if len(p) >= 2:
+        return p
+    if list[i:z] == list[i+z:z+z]:
+        p.append(list[i:z])
+        i += 1
+        z += 1
+        rp(list, i, z, p)
+    else:
+        if z == len(list)/2 + 1:
+            return p
+        z += 1
+        rp(list, i, z, p)
+    return p
+
+i = 0
+z = 1
+n = [1,2,3,4,5,1,2,3,4,5]
+print(rp(n, i, z))
